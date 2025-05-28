@@ -5,7 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import type { EmblaCarouselType } from 'embla-carousel';
 
-import { getSpecialBrands, getProducts } from '@/lib/api-client/products';
+import { getSpecialBrands } from '@/lib/api-client/products';
 import ProductList from './ProductList';
 import { ProductsType } from '@/types';
 import styles from './TabProduct.module.css';
@@ -57,29 +57,35 @@ const BrandsProduct = () => {
   }, []);
 
   useEffect(() => {
-    const fetchBrands = async () => {
-      const brandData:ProductsType[] = await getSpecialBrands();
+    const fetchBrandsAndProducts = async () => {
+      const brandData = await getSpecialBrands();
+
       const formattedBrands = brandData
         .filter((brand) => brand.id !== undefined && brand.title !== undefined)
         .map((brand) => ({
           id: brand.id as number,
           title: brand.title as string,
         }));
-      const limitedBrands = formattedBrands.slice(0, 2);
-      setBrands(limitedBrands);
-      if (limitedBrands.length > 0) {
-        setSelectedBrandId(limitedBrands[0].id); 
+      setBrands(formattedBrands);
+
+      const allProducts = brandData.flatMap((brand) =>
+        Array.isArray(brand.products)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          ? brand.products.map((product: any) => ({
+              ...product,
+              brand_id: brand.id,
+              brand: brand.title,
+              brand_slug: brand.slug,
+            }))
+          : []
+      );
+      setBrandProducts(allProducts);
+
+      if (formattedBrands.length > 0) {
+        setSelectedBrandId(formattedBrands[0].id);
       }
     };
-    fetchBrands();
-  }, []);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getProducts();
-      setBrandProducts(products);
-    };
-    fetchProducts();
+    fetchBrandsAndProducts();
   }, []);
 
   const filteredProducts = selectedBrandId

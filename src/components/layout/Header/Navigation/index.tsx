@@ -10,6 +10,9 @@ const Navigation = () => {
   const [categories, setCategories] = useState<CategoryType[]>([]);
   const t = useTranslations();
   const locale = useLocale();
+  const [openCategoryId, setOpenCategoryId] = useState<number | null>(null);
+  const [openSubCategoryId, setOpenSubCategoryId] = useState<number | null>(null);
+  const [openSubSubCategoryId, setOpenSubSubCategoryId] = useState<number | null>(null);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -32,50 +35,73 @@ const Navigation = () => {
     getCategories();
   }, [locale]);
 
-  // Recursive fonksiyon: Kategorileri ve alt kategorilerini render eder
   const RenderCategory = ({ category }: { category: CategoryType; depth?: number }) => {
     const hasSubcategories = category.categories && category.categories.length > 0;
+    const isOpen = openCategoryId === category.id;
 
     return (
-      <div key={category.id} className="group">
-        {/* Section title */}
-        <h4 className="text-[#1d4a8a] font-title-500 py-3 bg-[#f3f3f3] px-2 mb-3 text-[15px] flex items-center justify-between">
+      <div key={category.id}>
+        <h4
+          className="text-[#1d4a8a] font-title-500 py-3 bg-[#f3f3f3] px-2 mb-3 text-[15px] flex items-center justify-between cursor-pointer"
+          onClick={() => {
+            setOpenCategoryId(isOpen ? null : category.id);
+            setOpenSubCategoryId(null);
+          }}
+        >
           <Link href={`/products?category_id=${category.id}`}>{category.name}</Link>
-          {hasSubcategories && <ChevronRight className="h-4 w-4 text-gray-500 group-hover:rotate-90 transition-transform" />}
+          {hasSubcategories && <ChevronRight className={`h-4 w-4 text-gray-500 transition-transform ${isOpen ? 'rotate-90' : ''}`} />}
         </h4>
-
-        {/* Subcategories */}
-        {hasSubcategories && (
-          <ul className="space-y-1 hidden group-hover:block">
-            {category.categories.map((subCategory) => (
-              <li key={subCategory.id} className="pl-4 group/subcategory">
-                <div className="flex items-center justify-between">
-                  <Link
-                    href={`/products?category_id=${subCategory.id}`}
-                    className="text-gray-700 hover:text-blue-600 text-[15px] transition-colors flex items-center"
+        {hasSubcategories && isOpen && (
+          <ul className="space-y-1">
+            {category.categories.map((subCategory) => {
+              const hasSubSub = subCategory.categories && subCategory.categories.length > 0;
+              const isSubOpen = openSubCategoryId === subCategory.id;
+              return (
+                <li key={subCategory.id} className="pl-4">
+                  <div
+                    className="flex items-center justify-between cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setOpenSubCategoryId(isSubOpen ? null : subCategory.id);
+                      setOpenSubSubCategoryId(null);
+                    }}
                   >
-                    {subCategory.name}
-                  </Link>
-                  {subCategory.categories && subCategory.categories.length > 0 && (
-                    <ChevronRight className="h-4 w-4 text-gray-500 group-hover/subcategory:rotate-90 transition-transform" />
+                    <Link
+                      href={`/products?category_id=${subCategory.id}`}
+                      className="text-gray-700 hover:text-blue-600 text-[15px] transition-colors flex items-center"
+                    >
+                      {subCategory.name}
+                    </Link>
+                    {hasSubSub && <ChevronRight className={`h-4 w-4 text-gray-500 transition-transform ${isSubOpen ? 'rotate-90' : ''}`} />}
+                  </div>
+                  {hasSubSub && isSubOpen && (
+                    <ul className="ml-6 space-y-1 mt-2">
+                      {subCategory.categories.map((subSubCategory) => {
+                        const isSubSubOpen = openSubSubCategoryId === subSubCategory.id;
+                        return (
+                          <li key={subSubCategory.id}>
+                            <div
+                              className="flex items-center justify-between cursor-pointer"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setOpenSubSubCategoryId(isSubSubOpen ? null : subSubCategory.id);
+                              }}
+                            >
+                              <Link
+                                href={`/products?category_id=${subSubCategory.slug}`}
+                                className="text-gray-700 hover:text-blue-600 text-[14px] transition-colors"
+                              >
+                                {subSubCategory.name}
+                              </Link>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   )}
-                </div>
-                {subCategory.categories && subCategory.categories.length > 0 && (
-                  <ul className="ml-6 space-y-1 mt-2 hidden group-hover/subcategory:block">
-                    {subCategory.categories.map((subSubCategory) => (
-                      <li key={subSubCategory.id}>
-                        <Link
-                          href={`/products?category_id=${subSubCategory.id}`}
-                          className="text-gray-700 hover:text-blue-600 text-[14px] transition-colors"
-                        >
-                          {subSubCategory.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

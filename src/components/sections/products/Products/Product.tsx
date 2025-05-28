@@ -1,4 +1,5 @@
 'use client'
+
 import { ProductsType } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -109,7 +110,7 @@ const Product = ({ product }: { product: ProductsType }) => {
                     </div>
 
                     <div className="flex flex-col flex-grow">
-                        <Link href={`/products?category_id=${product.slug}`} className="text-gray-400 text-[12px] mb-1">{product.category}</Link>
+                        <Link href={`/products?category_id=${product.category_slug}`} className="text-gray-400 text-[12px] mb-1">{product.category}</Link>
                         <Link href={`/products/${product.slug}`} className="text-gray-800 font-medium md:text-[14px] text-md mb-1 leading-tight line-clamp-2">
                             {product.name}
                         </Link>

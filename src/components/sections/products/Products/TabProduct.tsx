@@ -23,11 +23,12 @@ const TabButton = React.memo(
 type Props = {
   firstbtntitle: string;
   lastbtntitle: string;
+  more: string;
 };
 
 TabButton.displayName = 'TabButton'
 
-const TabProduct = ({firstbtntitle, lastbtntitle}: Props) => {
+const TabProduct = ({firstbtntitle, lastbtntitle,}: Props) => {
   const [tab, setTab] = useState<'last' | 'selected'>('last')
   const [products, setProducts] = useState<{
     last: ProductsType[]

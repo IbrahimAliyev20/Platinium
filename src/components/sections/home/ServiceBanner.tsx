@@ -27,7 +27,7 @@ const ServiceBanner = async ({ categories }: { categories: CategoryType[] }) => 
                   src={category.image}
                   alt={category.name || 'Category image'}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   priority
                 />

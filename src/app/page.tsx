@@ -21,7 +21,6 @@ const Home = async () => {
   const statistics = await getStatistic();
   const brands = await getBrands();
 
-
   return (
     <>
       <div>
@@ -89,6 +88,7 @@ const Home = async () => {
           <TabProduct 
             firstbtntitle={t('tabproduct.firstbtntitle')}
             lastbtntitle={t('tabproduct.lastbtntitle')}
+            more = {t('shared.more')}
           />
         </div>
 

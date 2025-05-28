@@ -341,6 +341,7 @@ export type ProductsType = {
     id?:number
     brand_slug?: string,
     category_slug?: string,
+    products:string;
 }
 
 // END FOOTER ATTRIBUTES
