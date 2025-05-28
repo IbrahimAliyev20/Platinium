@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://platinium-17.az',
+  siteUrl: 'https://platinium-markup.vercel.app',
   generateRobotsTxt: true,
 };
