@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
+
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -22,6 +24,7 @@
     "lucide-react": "^0.487.0",
     "next": "15.2.4",
     "next-intl": "^4.1.0",
+    "next-sitemap": "^4.2.3",
     "nookies": "^2.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
