@@ -1,0 +1,46 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper {
+    padding: 0px 15px !important;
+}
+
+.portfolio .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.portfolio .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container,
+.image-container img {
+    border-radius: 20px
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    /* background: red !important;
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 15px;
+    text-align: center;
+    line-height: 60px; 
+    border-radius: 50%;
+    color: gray; */
+}
+
+.swiper-button-next:after {
+    content: "\2192";
+}
+
+.swiper-button-prev:after {
+    content: "\2190";
+}

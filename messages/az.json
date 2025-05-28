@@ -1,0 +1,103 @@
+{
+  "topbar": {
+    "addressLabel": "Ünvan",
+    "needHelp": "Yardım lazımdır? Bizə zəng edin:",
+    "callUs": "Bizə zəng edin:",
+    "email": "Email:",
+    "hours": "İş saatları"
+  },
+  "menu": {
+    "home": "Ana səhifə",
+    "about": "Haqqımızda",
+    "categories": "Kateqoriyalar",
+    "allCategories": "Bütün Kateqoriyalar",
+    "portfolio": "Portfolio",
+    "news": "Xəbərlər",
+    "media": "Media",
+    "contact": "Əlaqə",
+    "submenus": {
+      "whoWeAre": "Biz kimik",
+      "brands": "Brendlər",
+      "partnerships": "Müştərilər",
+      "faq": "FAQ",
+      "photos": "Foto",
+      "videos": "Videolar"
+    }
+  },
+  "shared": {
+    "more": "Daha çox"
+  },
+  "menu_titles": {
+    "whyChooseUs": "Niyə seçilirik?",
+    "categories": "Kateqoriyalar",
+    "products": "Məhsullar",
+    "brands": "Brendlər",
+    "specialbrands": "Seçilmiş Brendlər",
+    "clients": "Müştərilər",
+    "ourJourney": "Bizimlə yol qət edənlər",
+    "newsUpdates": "Yeniliklərdən xəbərdar olun",
+    "followUs": "Bizi izləyin"
+  },
+  "footer": {
+    "company": "Şirkət",
+    "category": "Kateqoriya",
+    "information": "Məlumat",
+    "copyright": "© 2025, Tərtibatçı MarkUp",
+    "allRightsReserved": "Bütün hüquqlar qorunur"
+  },
+  "faq": {
+    "title": "Sualım var",
+    "description": "Şirkət və komanda haqqında daha çox öyrənin."
+  },
+  "search": {
+    "foundItems": "{count} məhsul tapıldı"
+  },
+  "buttons": {
+    "viewDetails": "Detallı Bax",
+    "viewProducts": "Məhsullara bax"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "breadcrumb": "Portfolio və Fəaliyyətlər"
+  },
+  "news": {
+    "title": "Bloq və Xəbərlər",
+    "breadcrumb": "Bloq və Xəbərlər"
+  },
+  "date": {
+    "daysAgo": "{count} gün əvvəl"
+  },
+  "gallery": {
+    "image": "Şəkil Qalereyası",
+    "video": "Video Qalereyası",
+    "loading":"Yüklənir...",
+    "nophoto": "Şəkil yoxdur"
+  },
+  "contact": {
+    "title": "Əlaqə",
+    "firstName": "Adınız",
+    "email": "Email",
+    "phone": "Telefon",
+    "subject": "Mövzu",
+    "message": "Mesaj",
+    "sendButton": "Qeyd göndər",
+    "noteSent": "Qeydiniz uğurla göndərildi!",
+    "noteError": "Qeyd göndərilərkən xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin."
+  },
+  "filters": {
+    "by": "Üzrə",
+    "brand": "Brend",
+    "category": "Kateqoriya"
+  },
+  "products": {
+    "related": "Oxşar Məhsullar",
+    "title": "Bar avadanlığı",
+    "noProducts":"Məhsul yoxdur"
+  },
+  "tabproduct": {
+    "firstbtntitle": "Son Məhsullar",
+    "lastbtntitle": "Seçilmiş Məhsullar"
+  }
+
+  
+}

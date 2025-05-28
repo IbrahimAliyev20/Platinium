@@ -1,0 +1,105 @@
+{
+  "topbar": {
+    "addressLabel": "Адрес",
+    "callUs": "Позвоните нам:",
+    "email": "Эл. почта:",
+    "hours": "Часы работы",
+    "needHelp": "Нужна помощь? Позвоните нам:"
+  },
+  "menu": {
+    "home": "Главная",
+    "about": "О нас",
+    "categories": "Категории",
+    "allCategories": "Все категории",
+    "portfolio": "Портфолио",
+    "news": "Новости",
+    "media": "Медиа",
+    "contact": "Контакт",
+    "submenus": {
+      "whoWeAre": "Кто мы",
+      "brands": "Бренды",
+      "partnerships": "Партнерства",
+      "faq": "FAQ",
+      "photos": "Фотографии",
+      "videos": "Видео"
+    }
+  },
+  "shared": {
+    "more": "Больше"
+  },
+  "menu_titles": {
+    "whyChooseUs": "Почему выбирают нас?",
+    "categories": "Категории",
+    "products": "Продукты",
+    "brands": "Бренды",
+    "specialbrands": "Выбранные Бренды",
+    "clients": "Клиенты",
+    "ourJourney": "Те, кто прошел путь с нами",
+    "newsUpdates": "Будьте в курсе новостей",
+    "followUs": "Следите за нами"
+  },
+  "footer": {
+    "company": "Компания",
+    "category": "Категория",
+    "information": "Информация",
+    "copyright": "© 2025, Разработано MarkUp",
+    "allRightsReserved": "Все права защищены"
+  },
+  "faq": {
+    "title": "Есть вопрос",
+    "description": "Узнайте больше о компании и команде."
+  },
+  "search": {
+    "foundItems": "Мы нашли для вас {count} товар(ов)"
+  },
+  "buttons": {
+    "viewDetails": "Посмотреть детали",
+    "viewProducts": "Посмотреть продукты"
+  },
+  "portfolio": {
+    "title": "Портфолио",
+    "breadcrumb": "Портфолио и Деятельность"
+  },
+  "news": {
+    "title": "Блог и Новости",
+    "breadcrumb": "Блог и Новости"
+  },
+  "date": {
+    "daysAgo": "{count} дней назад"
+  },
+  "gallery": {
+    "image": "Галерея изображений",
+    "video": "Видеогалерея",
+    "gallery.loading":"Загрузка...",
+    "nophoto": "Нет изображения"
+
+
+  },
+  "contact": {
+    "title": "Контакт",
+    "firstName": "Ваше имя",
+    "email": "Ваша почта",
+    "phone": "Ваш телефон",
+    "subject": "Тема",
+    "message": "Сообщение",
+    "sendButton": "Отправить сообщение",
+    "noteSent": "Ваша запись была успешно отправлена!",
+    "noteError": "Произошла ошибка при отправке записи. Пожалуйста, попробуйте снова."
+  },
+  "filters": {
+    "by": "По",
+    "brand": "Бренд",
+    "category": "Категория"
+  },
+  "products": {
+    "related": "Похожие продукты",
+    "title": "Барное оборудование",
+    "noProducts":"Товара нет"
+
+  },
+  "tabproduct": {
+    "firstbtntitle": "Новые товары",
+    "lastbtntitle": "Выбранные товары"
+
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "topbar": {
+    "addressLabel": "Address",
+    "needHelp": "Need help? Call Us:",
+    "callUs": "Call Us:",
+    "email": "Email:",
+    "hours": "Hours"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "portfolio": "Portfolio",
+    "news": "News",
+    "media": "Media",
+    "contact": "Contact",
+    "submenus": {
+      "whoWeAre": "Who We Are",
+      "brands": "Brands",
+      "partnerships": "Partnerships",
+      "faq": "FAQ",
+      "photos": "Photos",
+      "videos": "Videos"
+    }
+  },
+  "shared": {
+    "more": "More"
+  },
+  "menu_titles": {
+    "whyChooseUs": "Why Choose Us?",
+    "categories": "Categories",
+    "products": "Products",
+    "brands": "Brands",
+    "specialbrands": "Featured Brands",
+    "clients": "Clients",
+    "ourJourney": "Those Who Travelled the Road with Us",
+    "newsUpdates": "Stay Updated with the News",
+    "followUs": "Follow Us"
+  },
+  "footer": {
+    "company": "Company",
+    "category": "Category",
+    "information": "Information",
+    "copyright": "© 2025, Developed by MarkUp",
+    "allRightsReserved": "All rights reserved"
+  },
+  "faq": {
+    "title": "Have a Question",
+    "description": "Learn more about the company and the team."
+  },
+  "search": {
+    "foundItems": "We found {count} item(s) for you"
+  },
+  "buttons": {
+    "viewDetails": "View Details",
+    "viewProducts": "View Products"
+  },
+  "portfolio": {
+    "title": "Портфолио",
+    "breadcrumb": "Портфолио и Деятельность"
+  },
+  "news": {
+    "title": "Blog & News",
+    "breadcrumb": "Blog & News"
+  },
+  "date": {
+    "daysAgo": "{count} days ago"
+  },
+  "gallery": {
+    "image": "Image Gallery",
+    "video": "Video Gallery",
+    "gallery.loading":"Loading...",
+    "nophoto": "No image"
+
+  },
+  "contact": {
+    "title": "Contact",
+    "firstName": "First Name",
+    "email": "Your Email",
+    "phone": "Your Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "sendButton": "Send Note",
+    "noteSent": "Your note has been sent successfully!",
+    "noteError": "There was an error sending your note. Please try again."
+  },
+  "filters": {
+    "by": "By",
+    "brand": "Brand",
+    "category": "Category"
+  },
+  "products": {
+    "related": "Related Products",
+    "title": "Bar equipment",
+    "noProducts":"No product available"
+
+  },
+  "tabproduct": {
+    "firstbtntitle": " Latest Products",
+    "lastbtntitle": "Selected Products"
+
+  }
+}

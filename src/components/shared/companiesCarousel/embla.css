@@ -1,0 +1,45 @@
+.embla {
+  --slide-spacing: 1rem;
+  --slide-size: 15%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  
+}
+
+.embla__container {
+  display: flex;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  margin-left: var(--slide-spacing);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .embla {
+    --slide-size: 20%;
+
+  }
+}
+@media (max-width: 992px) {
+  .embla {
+    --slide-size: 25%;
+
+  }
+}
+@media (max-width: 768px) {
+  .embla {
+    --slide-size: 35%;
+
+  }
+}
+@media (max-width: 576px) {
+  .embla {
+    --slide-size: 45%;
+  }
+}
