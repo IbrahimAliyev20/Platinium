@@ -27,7 +27,7 @@ const ProductList = ({ products }: { products: ProductsType[] }) => {
 
     return (
         <section>
-            <div className="lg:container mx-auto  pt-3">
+            <div className="lg:container mx-auto  pt-6">
                 {products.length === 0 ? (
                     <div className='text-center mt-[100px] text-2xl flex items-center justify-center'>
                         {t('products.noProducts')}

@@ -66,7 +66,7 @@ const TabProduct = ({firstbtntitle, lastbtntitle,}: Props) => {
 
   return (
     <div className="relative container mx-auto px-0 md:px-6">
-      <div className="flex gap-2 mb-4 ml-4">
+      <div className="flex gap-2  ">
         <TabButton
           active={tab === 'last'}
           label={firstbtntitle}

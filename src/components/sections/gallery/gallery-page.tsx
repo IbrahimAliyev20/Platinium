@@ -79,7 +79,7 @@ export default function GalleryPage({ initialPhotos = [], initialNextUrl = null 
           </div>
         )}
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-6">
           {photos.map((photo, index) => (
             <motion.div
               key={index}

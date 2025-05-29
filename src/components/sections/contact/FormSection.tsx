@@ -84,9 +84,9 @@ const FormSection = ({ contact }: { contact: ContactType | undefined }) => {
     }
 
     return (
-        <div >
-            <div className="bg-white flex flex-col gap-4 items-start md:flex-row  rounded-lg overflow-hidden py-16">
-                <div className="w-full md:w-[70%] px-6 md:px-10  ">
+        <div className=" py-20">
+            <div className="bg-white flex flex-col gap-4 items-start md:flex-row  rounded-lg overflow-hidden py-10 pr-10">
+                <div className="w-full md:w-[70%] pl-10  ">
                     <div className="mb-8">
                         <h2 className="md:text-4xl text-3xl font-title-500 text-gray-800">{t('contact.title')}</h2>
                     </div>

@@ -99,7 +99,7 @@ const BrandsProduct = () => {
 
   return (
     <div>
-      <div className=" flex gap-2 justify-start  ml-0 md:ml-10">
+      <div className=" flex gap-2 justify-start  ml-0 ">
         {brands.map((brand) => (
           <button
             key={brand.id}
