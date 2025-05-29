@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://platinium-17.az
-
-# Sitemaps
-Sitemap: https://platinium-17.az/sitemap.xml

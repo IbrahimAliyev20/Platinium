@@ -37,7 +37,7 @@ const About = async () => {
 
   return (
     <div>
-      <div className="sm:py-12 py-6 md:py-14">
+      <div className="bg-white sm:py-12 py-6 md:py-14">
         <AboutBanner />
       </div>
       <div className="md:py-10 py-2">

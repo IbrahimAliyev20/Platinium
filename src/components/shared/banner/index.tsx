@@ -44,12 +44,7 @@ const HomeBanner = () => {
                   sizes='100vw'
                   style={{ objectFit: 'cover' }}
                 />
-                {/* <div className="absolute inset-0 bg-blue-900/60 z-10 rounded-2xl"></div> */}
-
-
-                {/* <div className='absolute top-[40%] z-20  sm:left-[5%] left-[15%]  lg:text-[50px] sm:text-[40px] text-[30px] lg:w-[40%] sm:w-[60%] w-[80%]  text-left text-white font-title-500 md:leading-[50px] sm:leading-[40px] leading-[30px]'>
-                  {banner.title}
-                  </div> */}
+                
               </div>
             </SwiperSlide>
           ))

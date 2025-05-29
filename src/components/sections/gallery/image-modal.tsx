@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useCallback, useEffect, useState } from "react"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { MediaType } from "@/types"
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { MediaType } from "@/types";
 
 interface ImageModalProps {
-  images: MediaType[]
-  currentIndex: number
-  onClose: () => void
-  onIndexChange: (index: number) => void
+  images: MediaType[];
+  currentIndex: number;
+  onClose: () => void;
+  onIndexChange: (index: number) => void;
 }
 
 export default function ImageModal({
@@ -20,57 +20,57 @@ export default function ImageModal({
   onClose,
   onIndexChange,
 }: ImageModalProps) {
-  const [touchStart, setTouchStart] = useState<number | null>(null)
-  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   const navigateToPrevious = useCallback(() => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1
-    onIndexChange(newIndex)
-  }, [currentIndex, images.length, onIndexChange])
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    onIndexChange(newIndex);
+  }, [currentIndex, images.length, onIndexChange]);
 
   const navigateToNext = useCallback(() => {
-    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1
-    onIndexChange(newIndex)
-  }, [currentIndex, images.length, onIndexChange])
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    onIndexChange(newIndex);
+  }, [currentIndex, images.length, onIndexChange]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        onClose()
+        onClose();
       } else if (e.key === "ArrowLeft") {
-        navigateToPrevious()
+        navigateToPrevious();
       } else if (e.key === "ArrowRight") {
-        navigateToNext()
+        navigateToNext();
       }
-    }
+    };
 
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [navigateToNext, navigateToPrevious, onClose])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigateToNext, navigateToPrevious, onClose]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX)
-  }
+    setTouchStart(e.targetTouches[0].clientX);
+  };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  }
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
 
   const handleTouchEnd = () => {
-    if (touchStart === null || touchEnd === null) return
-    const distance = touchStart - touchEnd
-    const isLeftSwipe = distance > 50
-    const isRightSwipe = distance < -50
+    if (touchStart === null || touchEnd === null) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
 
     if (isLeftSwipe) {
-      navigateToNext()
+      navigateToNext();
     } else if (isRightSwipe) {
-      navigateToPrevious()
+      navigateToPrevious();
     }
 
-    setTouchStart(null)
-    setTouchEnd(null)
-  }
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
 
   return (
     <motion.div
@@ -90,8 +90,8 @@ export default function ImageModal({
       <button
         className="absolute left-4 z-50 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
         onClick={(e) => {
-          e.stopPropagation()
-          navigateToPrevious()
+          e.stopPropagation();
+          navigateToPrevious();
         }}
       >
         <ChevronLeft className="w-6 h-6" />
@@ -100,8 +100,8 @@ export default function ImageModal({
       <button
         className="absolute right-4 z-50 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
         onClick={(e) => {
-          e.stopPropagation()
-          navigateToNext()
+          e.stopPropagation();
+          navigateToNext();
         }}
       >
         <ChevronRight className="w-6 h-6" />
@@ -124,7 +124,12 @@ export default function ImageModal({
         >
           <div className="relative w-full h-full">
             <Image
-              src={images[currentIndex].image || "/placeholder.svg"}
+              src={
+                images[currentIndex].image_logo &&
+                images[currentIndex].image_logo !== "null"
+                  ? images[currentIndex].image_logo
+                  : images[currentIndex].image
+              }
               alt={`image ${currentIndex + 1}`}
               fill
               sizes="(max-width: 1280px) 100vw, 1280px"
@@ -140,5 +145,5 @@ export default function ImageModal({
         </motion.div>
       </div>
     </motion.div>
-  )
+  );
 }

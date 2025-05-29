@@ -406,6 +406,7 @@ export type MediaType = {
     thumb_image: string,
     video?: string,
     link?:string,
+    image_logo:string,
     
 }
 

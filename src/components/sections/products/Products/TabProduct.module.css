@@ -10,16 +10,17 @@
   .embla__slide {
     flex: 0 0 100%;
     min-width: 0;
-    padding: 1rem;
   }
   
-  .embla__button--prev {
-    position: absolute;
-    top: 50%;
-    left: 3px;
-    transform: translateY(-50%);
-    z-index: 40;
-    width: 36px; 
+  .embla__button--prev, .embla__button--next {
+    position: static;
+    margin: 0 8px;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    z-index: 1;
+    width: 36px;
     height: 36px;
     background-color: white;
     border-radius: 50%;
@@ -29,37 +30,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease;
   }
-  .embla__button--next{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 40;
-    width: 36px;  
-    height: 36px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease;
-  }
- .embla__button--prev:hover{
-    opacity: 0.6;
-  }
- .embla__button--next:hover{
+  .embla__button--prev:hover,
+  .embla__button--next:hover {
     opacity: 0.6;
   }
   
-  .embla__button--prev {
-    left:-8px;
-  }
-  
-  .embla__button--next {
-    right: -8px;
-  }
- 
   @media (max-width: 767px) {
   .embla__button--prev,
   .embla__button--next {

@@ -23,7 +23,7 @@ const Category = ({ category, setOpenFilter }: { category: CategoryType; setOpen
     };
 
     return (
-      <div className={`border-b border-gray-100 last:border-b-0 ${depth > 0 ? "ml-6" : ""}`}>
+      <div className={` border-b border-gray-100 last:border-b-0 ${depth > 0 ? "ml-6" : ""}`}>
         <div
           className=" flex items-center justify-between py-3 cursor-pointer hover:bg-gray-50 rounded-lg px-2 transition-colors "
           onClick={depth === 0 ? toggleSubcategories : toggleSubLevel}

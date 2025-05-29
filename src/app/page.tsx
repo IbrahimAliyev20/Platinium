@@ -31,7 +31,7 @@ const Home = async () => {
             </div>
           <Brands brands={brands}  />
         
-        <div className='  py-6 md:py-16'>
+        <div className=' bg-white py-6 md:py-16'>
           <AboutBanner>
             <Link
               href='/about'
@@ -92,7 +92,7 @@ const Home = async () => {
           />
         </div>
 
-        <div className='container mx-auto px-4 md:px-1 py-8 md:py-16'>
+        <div className='container mx-auto px-4 md:px-6 py-8 md:py-16'>
           <h2 className='sm:text-4xl text-3xl font-title-500 text-gray-800 sm:mb-5 mb-3 text-left ml-0 md:ml-4 mx-auto px-0 md:px-6'>
             {t('menu_titles.specialbrands')}
           </h2>

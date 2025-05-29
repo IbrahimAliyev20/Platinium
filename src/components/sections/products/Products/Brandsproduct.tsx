@@ -127,9 +127,12 @@ const BrandsProduct = () => {
             <div className="text-center py-8">Məhsul tapılmadı</div>
           )}
         </div>
-
-        {productGroups.length > 0 && <CarouselNavButtons emblaApi={emblaApi} />}
       </div>
+      {productGroups.length > 0 && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+          <CarouselNavButtons emblaApi={emblaApi} />
+        </div>
+      )}
     </div>
   );
 };

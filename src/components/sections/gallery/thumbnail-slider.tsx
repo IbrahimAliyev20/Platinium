@@ -1,33 +1,37 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ThumbnailSliderProps {
   images: {
-    id: number
-    src: string
-    alt: string
-  }[]
-  currentIndex: number
-  onThumbnailClick: (index: number) => void
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  currentIndex: number;
+  onThumbnailClick: (index: number) => void;
 }
 
-export default function ThumbnailSlider({ images, currentIndex, onThumbnailClick }: ThumbnailSliderProps) {
-  const sliderRef = useRef<HTMLDivElement>(null)
+export default function ThumbnailSlider({
+  images,
+  currentIndex,
+  onThumbnailClick,
+}: ThumbnailSliderProps) {
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -200, behavior: "smooth" })
+      sliderRef.current.scrollBy({ left: -200, behavior: "smooth" });
     }
-  }
+  };
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 200, behavior: "smooth" })
+      sliderRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <div className="relative w-full max-w-5xl mx-auto mt-4">
@@ -47,11 +51,19 @@ export default function ThumbnailSlider({ images, currentIndex, onThumbnailClick
           <div
             key={image.id}
             className={`flex-shrink-0 w-16 h-16 relative cursor-pointer rounded-md overflow-hidden transition-all duration-200 ${
-              currentIndex === index ? "ring-2 ring-orange-500 scale-110" : "opacity-70 hover:opacity-100"
+              currentIndex === index
+                ? "ring-2 ring-orange-500 scale-110"
+                : "opacity-70 hover:opacity-100"
             }`}
             onClick={() => onThumbnailClick(index)}
           >
-            <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill sizes="64px" className="object-cover" />
+            <Image
+              src={image.src || "/placeholder.svg"}
+              alt={image.alt}
+              fill
+              sizes="64px"
+              className="object-cover"
+            />
           </div>
         ))}
       </div>
@@ -63,5 +75,5 @@ export default function ThumbnailSlider({ images, currentIndex, onThumbnailClick
         <ChevronRight className="w-5 h-5" />
       </button>
     </div>
-  )
+  );
 }

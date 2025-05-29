@@ -11,7 +11,7 @@ const BrandCards = async () => {
   const t = await getTranslations()
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 gap-6">
         {brands.map((brand: BrandsType, index: number) => {
           const { title, image, description, slug } = brand;
@@ -35,7 +35,7 @@ const BrandCards = async () => {
 
                 {/* Title + Description */}
                 <div className="flex flex-col items-start justify-between mb-2">
-                  <h3 className="text-lg font-medium text-gray-900">{title}</h3>
+                  <h3 className="text-[24px] font-medium text-gray-900">{title}</h3>
                   <ToggleDescription text={description} />
 
                   <Link

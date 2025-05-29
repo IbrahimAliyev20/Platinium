@@ -17,11 +17,11 @@ const NewsItem = ({ blog }: { blog: BlogType }) => {
                     />
                 </div>
                 <div className="p-4 px-5 flex flex-col flex-grow">
-                    <h3 className="md:text-[24px] text-[20px] text-center font-title-500 text-[#0F172A] mb-2 line-clamp-2">
+                    <h3 className="md:text-[24px] text-[20px]  font-title-500 text-[#0F172A] mb-2 line-clamp-2 leading-[26px]">
                         {blog.title}
                     </h3>
                     <p
-                        className="text-[1rem] text-gray-600 mb-4 line-clamp-3 text-center flex-grow"
+                        className="text-[1rem] text-gray-600 mb-4 line-clamp-3  flex-grow"
                         dangerouslySetInnerHTML={{ __html: blog.description }}
                     ></p>
                 </div>

@@ -7,7 +7,7 @@ const PortfolioList = async() => {
 const portfolios=await getPortfolios()
     return (
         <div>
-            <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10'>
+            <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6'>
                 {
                     portfolios
                         .map((portfolio, index) => (

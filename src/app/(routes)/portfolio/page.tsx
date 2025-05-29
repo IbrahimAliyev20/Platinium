@@ -33,7 +33,7 @@ const Portfolio = async () => {
   return (
     <div>
       <PageHeader title={t('portfolio.title')} link={t('portfolio.breadcrumb')} />
-      <div className="py-16">
+      <div className="container mx-auto py-16 px-6">
         <PortfolioList />
       </div>
     </div>

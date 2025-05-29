@@ -9,8 +9,8 @@ const AboutBanner = async ({ children }: {children?:ReactNode}) => {
     const about = await getAbout()
 
     return (
-        <section id='about-section' className="container mx-auto px-4 md:px-6 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section id='about-section' className=" container mx-auto px-4 md:px-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-15 items-center">
 
                 <div>
                     <h1 className="sm:text-3xl text-2xl md:text-4xl font-title-500 text-gray-800">{about.title}</h1>

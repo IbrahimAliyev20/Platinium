@@ -22,12 +22,12 @@ const ServiceBanner = async ({ categories }: { categories: CategoryType[] }) => 
               style={{ backgroundColor: category.color }}
             >
               {/* Şəkil hissəsi */}
-              <div className="relative w-full h-[180px] sm:h-[200px] lg:h-[220px]">
+              <div className="relative w-full h-[180px] sm:h-[200px] lg:h-[220px] ">
                 <Image
                   src={category.image}
                   alt={category.name || 'Category image'}
                   fill
-                  className="object-contain object-center"
+                  className="object-contain object-center p-5"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   priority
                 />

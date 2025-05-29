@@ -10,8 +10,8 @@ export default async function NewsItems() {
     const blogs=await getBlogs()
 
     return (
-        <section className="container  px-4 py-0 md:py-12 mx-auto">
-            <h2 className="text-3xl  md:text-4xl  sm:ml-6 font-title-500 text-[#0F172A] mb-8">
+        <section className="container  px-6 py-0 md:py-12 mx-auto">
+            <h2 className="text-3xl  md:text-4xl md:ml-0  sm:ml-6 font-title-500 text-[#0F172A] mb-8">
                {t('menu_titles.newsUpdates')}
             </h2>
 

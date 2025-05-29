@@ -90,7 +90,7 @@ const Products = () => {
     <div>
       <PageHeader title={t('menu_titles.products')} link={t('menu_titles.products')} subLink={filteredProducts[0]?.category} />
 
-      <div className="flex lg:flex-row flex-col items-start gap-10 py-16">
+      <div className="container mx-auto flex lg:flex-row flex-col items-start gap-10 py-16">
         <div className="lg:block hidden lg:w-1/5 w-full">
           <CategoryList categories={categories} />
           <div className='mt-4'>

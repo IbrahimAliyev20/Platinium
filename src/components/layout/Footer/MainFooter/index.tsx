@@ -14,7 +14,7 @@ const MainFooter = async ({settings}:{settings:SettingsType}) => {
 
     return (
         <footer className="border-t border-gray-200 pt-10 pb-6 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-6">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
@@ -30,8 +30,8 @@ const MainFooter = async ({settings}:{settings:SettingsType}) => {
                     </div>
 
                     {/* Company Links */}
-                    <div>
-                        <h3 className="text-lg font-medium text-gray-900 mb-4">{t('footer.company')}</h3>
+                    <div className='ml-0 lg:ml-0 xl:ml-19'>
+                        <h3 className="text-lg font-medium text-gray-900 mb-4 ">{t('footer.company')}</h3>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/about" className="text-gray-600 hover:text-green-500 text-[16px] transition-colors">

@@ -34,9 +34,9 @@ const News = async () => {
 
 
   return (
-    <div>
+    <div >
       <PageHeader title={t('news.title')} link={t('news.breadcrumb')} />
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-16">
+      <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-16">
         {news.map((blog, index) => (
           <NewsItem key={index} blog={blog} />
         ))}

@@ -91,13 +91,13 @@ export default function GalleryPage({ initialPhotos = [], initialNextUrl = null 
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
-              <Image
-                src={photo.image || "/placeholder.svg"}
-                alt="gallery photo"
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover hover:scale-110 transition-transform duration-500"
-              />
+            <Image
+  src={photo.image_logo && photo.image_logo !== "null" ? photo.image_logo : photo.image}
+  alt="gallery photo"
+  fill
+  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+  className="object-cover hover:scale-110 transition-transform duration-500"
+/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end" />
             </motion.div>
           ))}

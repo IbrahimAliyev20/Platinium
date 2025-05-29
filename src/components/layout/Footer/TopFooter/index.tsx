@@ -7,9 +7,9 @@ const TopFooter = async () => {
     const attributes = await getFooterAttribute()
 
     return (
-        <div className='container mx-auto w-full py-6 md:block hidden' >
-            <div className=" mx-auto px-4">
-                <div className="flex items-center justify-center gap-4">
+        <div className='container mx-auto w-full py-6 md:block hidden px-6' >
+            <div >
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {/* Best prices & offers */}
 
                     {
